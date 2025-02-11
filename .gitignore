@@ -3,12 +3,34 @@ node_modules/
 .pnp
 .pnp.js
 
+# Build outputs (both frontend and backend)
+build/
+dist/
+out/
+public/
+coverage/
+.cache/
+
+# Frontend specific
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/out/
+frontend/public/
+frontend/.cache/
+
+# Backend specific
+backend/node_modules/
+backend/build/
+backend/dist/
+backend/out/
+backend/.cache/
+backend/.env/
+
 # Environment variables
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*.local
 
 # Logs
 logs/
@@ -16,16 +38,6 @@ logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-*.pid
-*.seed
-
-# Coverage
-coverage/
-
-# Build artifacts
-build/
-dist/
-dist-ssr/
 
 # Editor directories and files
 .vscode/
@@ -39,18 +51,6 @@ dist-ssr/
 # OS files
 .DS_Store
 
-# Local cache
-.cache/
-.svelte-kit/
-
-# Vite cache
-.turbo/
-
-# Serverless
+# Serverless / Other
 .serverless/
-
-# MongoDB data
 data/db/
-
-# Testing
-coverage/
