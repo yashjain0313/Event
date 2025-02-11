@@ -74,19 +74,19 @@ PORT=5000
 
 tedx-registration-system/
 ├── backend/
-│ ├── models/ # Database models (Registration, Admin)
-│ ├── routes/ # API routes (registrations, admin)
-│ ├── middleware/ # Authentication middleware
-│ └── server.js # Backend entry point
-│
+  ├── models/ # Database models (Registration, Admin)
+  ├── routes/ # API routes (registrations, admin)
+  ├── middleware/ # Authentication middleware
+  └── server.js # Backend entry point
+
 ├── frontend/
-│ ├── public/ # Static assets
-│ ├── src/
-│ │ ├── pages/ # React components (Home, Registration, Admin)
-│ │ ├── assets/ # Fonts & images
-│ │ └── App.jsx # Main application router
-│ └── package.json
-│
+    ├── public/ # Static assets
+    ├── src/
+    │ ├── pages/ # React components (Home, Registration, Admin)
+    │ ├── assets/ # Fonts & images
+    │ └── App.jsx # Main application router
+    └── package.json
+
 └── README.md
 
 
@@ -151,13 +151,6 @@ npm run dev
 | DELETE | /api/admin/registrations/:id | Delete registration      |
 | POST   | /api/admin/login        | Admin login                     |
 
-## Screenshots
-
-![Admin Dashboard](screenshots/dashboard.png)
-*Admin Dashboard with search and PDF export*
-
-![Data Analysis](screenshots/analysis.png)
-*Interactive data visualization dashboard*
 
 ## License
 
