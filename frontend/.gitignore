@@ -1,0 +1,28 @@
+# Node.js
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Build directories
+dist/
+build/
+
+# Miscellaneous
+.DS_Store
+.env
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
