@@ -42,9 +42,9 @@ router.post("/login", async (req, res) => {
 router.get("/registrations", protect, async (req, res) => {
   try {
     const registrations = await Registration.find().sort({ createdAt: -1 });
-    res.json({ success: true, data: registrations });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.json(registrations);
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
   }
 });
 

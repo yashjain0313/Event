@@ -15,7 +15,7 @@ const HomePage = () => {
           minHeight: "100vh",
           width: "100%",
           background:
-            'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/tedx-bg.jpeg")',
+            'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/tedx-bg.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
