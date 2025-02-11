@@ -1,0 +1,46 @@
+# Dependencies
+**/node_modules/
+**/dist/
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.development
+**/.env.production
+**/.env.test
+
+# IDE & OS files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+.DS_Store
+Thumbs.db
+
+# Frontend specific
+frontend/build/
+frontend/.next/
+frontend/.cache/
+frontend/coverage/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Backend specific
+backend/dist/
+backend/build/
+backend/coverage/
+backend/uploads/
+backend/logs/
+backend/*.log
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+
+# Temp files
+*.swp
+*.swo
+*~
