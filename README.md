@@ -43,7 +43,7 @@ A full-stack application for managing TEDx event registrations with admin dashbo
 - CORS (v2.8.5)
 
 ## Project Structure
-
+```
 Tedx-registration/
 ├── backend/
 │ ├── models/ # Database schemas
@@ -64,6 +64,7 @@ Tedx-registration/
 │ └── index.html
 │
 └── README.md
+```
 
 ## Installation Guide
 
