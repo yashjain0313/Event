@@ -1,165 +1,211 @@
-# TEDx Event Registration System
+## TEDx Event Registration System
 
 A full-stack application for managing TEDx event registrations with admin dashboard and data analysis capabilities.
 
 ## Features
 
-**User Facing**
-- Event information page
-- Online registration form with validation
+**User Features**
+
+- Event registration with form validation
+- Event information and details
 - Success confirmation page
+- Mobile responsive design
 
 **Admin Features**
-- Secure JWT-based login system
-- Dashboard with all registrations
-- CRUD operations (Create, Read, Update, Delete)
-- PDF export functionality
-- Advanced search across all fields
-- Data analysis dashboard with interactive charts
-- State-wise registration analysis
-- Age group distribution visualization
-- Top pincode areas statistics
-- Real-time registration statistics
 
-## Technologies Used
+- Secure admin login system
+- Dashboard with registration management
+- CRUD operations for registrations
+- PDF export functionality
+- Advanced search and filtering
+- Data visualization dashboard
+- Analytics and statistics
+
+## Tech Stack
 
 **Frontend**
-- React.js (v19)
-- Material-UI (MUI) for UI components
-- Recharts for data visualization
-- JSPDF for PDF generation
-- React Router (v6) for navigation
+
+- React (v19.0.0)
+- Material-UI (v6.4.3)
+- React Router DOM (v6.29.0)
+- Axios (v1.7.9)
+- Recharts (v2.15.1)
+- JSPDF (v2.5.2)
+- Vite (v6.1.0)
 
 **Backend**
-- Node.js (Express.js)
-- MongoDB with Mongoose ODM
-- JWT Authentication
-- CORS for secure cross-origin requests
 
-## Installation
-
-### Prerequisites
-- Node.js (v18+)
-- MongoDB (local or Atlas)
-- Git
-
-### Setup Instructions
-
-1. **Clone the repository**
-git clone https://github.com/your-username/tedx-registration-system.git
-cd tedx-registration-system
-
-2. **Install dependencies**
-bash
-cd backend
-npm install
-
-
-3. **Install frontend dependencies**
-bash
-cd ../frontend
-npm install
-
-
-4. **Environment Setup**
-   - Create `.env` file in backend folder:
-   env
-JWT_SECRET=your_jwt_secret_key
-MONGO_URI=mongodb+srv://your-mongodb-connection-string
-PORT=5000
-
-
+- Node.js
+- Express.js (v4.21.2)
+- MongoDB with Mongoose (v8.10.0)
+- JWT Authentication (v9.0.2)
+- bcryptjs (v2.4.3)
+- CORS (v2.8.5)
 
 ## Project Structure
 
-tedx-registration-system/
+Tedx-registration/
 ├── backend/
-  ├── models/ # Database models (Registration, Admin)
-  ├── routes/ # API routes (registrations, admin)
-  ├── middleware/ # Authentication middleware
-  └── server.js # Backend entry point
-
+│ ├── models/ # Database schemas
+│ ├── routes/ # API endpoints
+│ ├── middleware/ # Auth middleware
+│ ├── controllers/ # Business logic
+│ ├── config/ # Configuration files
+│ └── server.js # Entry point
+│
 ├── frontend/
-    ├── public/ # Static assets
-    ├── src/
-    │ ├── pages/ # React components (Home, Registration, Admin)
-    │ ├── assets/ # Fonts & images
-    │ └── App.jsx # Main application router
-    └── package.json
-
+│ ├── src/
+│ │ ├── components/ # Reusable components
+│ │ ├── pages/ # Page components
+│ │ ├── services/ # API services
+│ │ ├── utils/ # Helper functions
+│ │ ├── assets/ # Static assets
+│ │ └── App.jsx # Main component
+│ └── index.html
+│
 └── README.md
 
+## Installation Guide
 
+### Prerequisites
 
+- Node.js (v16 or higher)
+- MongoDB (local or Atlas)
+- npm or yarn package manager
+
+### Setup Commands
+
+1. **Clone the repository**
+
+```bash
+git clone <repository-url>
+cd frontend
+```
+
+2. **Backend Setup**
+
+```bash
+cd backend
+npm install
+```
+
+Required backend dependencies:
+
+```bash
+npm install express mongoose dotenv cors jsonwebtoken bcryptjs
+```
+
+3. **Frontend Setup**
+
+```bash
+cd frontend
+npm install
+```
+
+Required frontend dependencies:
+
+```bash
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+npm install react-router-dom axios recharts
+npm install jspdf jspdf-autotable
+```
+
+4. **Environment Variables**
+   Create `.env` file in backend directory:
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
 
 ## Running the Application
 
 1. **Start Backend Server**
-bash
+
+```bash
 cd backend
 npm start
+```
 
+Server runs on http://localhost:5000
 
 2. **Start Frontend Development Server**
 
-bash
+```bash
 cd frontend
 npm run dev
+```
 
-
-3. **Access the Application**
-- User Interface: `http://localhost:5173`
-- Admin Dashboard: `http://localhost:5173/admin/login`
-  - Default Admin Credentials:
-  - Username: `admin`
-  - Password: `admin`
-
-## Key Features Implementation
-
-### Admin Dashboard
-- JWT authentication with 30-minute token expiration
-- Real-time data updates using Axios
-- PDF report generation with jspdf-autotable
-- Advanced search functionality across all fields
-- Responsive table with sorting and pagination
-
-### Data Analysis
-- Interactive charts using Recharts
-- State-wise registration distribution (Bar Chart)
-- Age group analysis (Pie Chart)
-- Top 5 pincode areas (Bar Chart)
-- Real-time statistics:
-  - Total registrations
-  - Average age
-  - Unique states
-  - Unique pincodes
-
-## Security Features
-- Protected admin routes with JWT
-- Encrypted passwords using bcryptjs
-- Input validation on both client and server
-- Error handling middleware
-- CORS configuration for secure API access
+Frontend runs on http://localhost:5173
 
 ## API Endpoints
 
-| Method | Endpoint                | Description                     |
-|--------|-------------------------|---------------------------------|
-| POST   | /api/registrations      | Create new registration         |
-| GET    | /api/admin/registrations| Get all registrations (Admin)   |
-| PUT    | /api/admin/registrations/:id | Update registration      |
-| DELETE | /api/admin/registrations/:id | Delete registration      |
-| POST   | /api/admin/login        | Admin login                     |
+| Method | Endpoint                     | Description           |
+| ------ | ---------------------------- | --------------------- |
+| POST   | /api/register                | Create registration   |
+| GET    | /api/admin/registrations     | Get all registrations |
+| PUT    | /api/admin/registrations/:id | Update registration   |
+| DELETE | /api/admin/registrations/:id | Delete registration   |
+| POST   | /api/admin/login             | Admin authentication  |
 
+## Admin Access
 
-## License
+- URL: http://localhost:5173/admin
+- Default credentials:
+  - Username: admin
+  - Password: admin123
 
-Distributed under the MIT License. See `LICENSE` for more information.
+## Build Commands
+
+**Frontend Production Build**
+
+```bash
+cd frontend
+npm run build
+```
+
+**Backend Production Start**
+
+```bash
+cd backend
+npm start
+```
+
+## Additional Tools
+
+**Install PM2 for Production**
+
+```bash
+npm install -g pm2
+pm2 start backend/server.js
+```
+
+## Development Commands
+
+**Run ESLint**
+
+```bash
+cd frontend
+npm run lint
+```
+
+**Preview Production Build**
+
+```bash
+cd frontend
+npm run preview
+```
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Create Pull Request
+
+## 👥 Authors
+
+- Yash Jain
+
